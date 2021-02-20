@@ -83,7 +83,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"Muted <b>{html.escape(member.user.first_name)}</b> with no expiration date!",
+            f"Muted <b>{html.escape(member.user.first_name)}</b> Karena lu meresahkan babi!!",
             parse_mode=ParseMode.HTML,
         )
         return log
@@ -139,7 +139,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                f"gua unmute <b>{html.escape(member.user.first_name)}</b> lain kali baca rules biar ga bego2 amat hm!!!",
                 parse_mode=ParseMode.HTML,
             )
             return (
