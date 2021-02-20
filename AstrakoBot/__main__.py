@@ -73,24 +73,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am a modular group management bot.
-
-You can find my list of available commands with /help.
+Halo {}, Perkenalkan nama saya {}! 
+Saya adalah robot yang bisa membuatmu jatuh cinta xixi.
+Saya ada untuk menghilangkan kagalauan yang haqiqi.
+Dibuat khusus untuk menyatukan hati dua insan di telegram.
+Saya hanya robot, tapi saya bisa jatuh cinta egegege.
+━─━─━─━─━─━─━─━─━─━─━
+▪**Managed by:** [ᴹᵘᵏˡᵃˢˢˢ ⁪⁬⁮⁮⁮⁮](https://t.me/muklasss90)
+▪**JOIN MY CHANNEL:** [KLIK DISINI](https://t.me/chlenterasajak)
+━─━─━─━─━─━─━─━─━─━─━
+Tekan /help untuk melihat daftar fitur saya.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a modular group management bot and help admins manage their groups. Have a look at the following for an idea of some of \
-the things I can help you with.
+saya bot pintar, nama ku *{}*.
+Saya adalah manusia robot dengan beberapa kelebihan yang menyenangkan! Silahkan lihat berikut ini untuk beberapa ide dari \
+hal-hal yang bisa saya bantu.
 
 *Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
+ • /help: PM adalah Anda pesan ini.
+ • /help <module name>: PM Anda info tentang modul itu.
+ • /donate:informasi tentang cara berdonasi!
  • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+   •di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+   • dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 
 
 {}
@@ -100,7 +106,7 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-ASTRAKOBOT_IMG = "https://i.imgur.com/1oah5E2.jpg"
+ASTRAKOBOT_IMG = "https://telegra.ph/file/207930a2f6eb3ea57c5b8.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 AstrakoBot is hosted on its own server and doesn't require any donations as of now but \
@@ -219,36 +225,26 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="Add AstrakoBot to your group",
-                                url="t.me/{}?startgroup=true".format(
-                                    context.bot.username
-                                ),
-                            )
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="Support Group",
-                                url=f"https://t.me/AstrakoBotSupport",
-                            ),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="Getting started guide",
-                                url="https://t.me/OnePunchUpdates/29",
-                            )
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text="Source code",
-                                url="https://github.com/Astrako/AstrakoBot",
-                            )
-                        ],
-                    ]
-                ),
-            )
+                    [[
+                        InlineKeyboardButton(
+                            text="🤖 Add Saya ke group",
+                            url="t.me/{}?startgroup=true".format(
+                                context.bot.username))
+                    ],
+                     [
+                         InlineKeyboardButton(
+                             text="👥 GROUP SUPPORT ",
+                             url=f"https://t.me/cari_teman_telegram"),
+                     
+                         InlineKeyboardButton(
+                             text="🍭 Help & Command",
+                             url=f"t.me/{dispatcher.bot.username}?start=help")
+                     ],
+                     [
+                         InlineKeyboardButton(
+                             text="👻 Instagram Owner",
+                             url="https://www.instagram.com/muklaskhoiru_wf")
+                     ]]))
     else:
         update.effective_message.reply_text(
             "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
