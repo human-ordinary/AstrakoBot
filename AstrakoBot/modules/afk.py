@@ -63,9 +63,10 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 "{} sekarang waktunya nimbrung!",
                 "{} disini menantimu:)!",
                 "{} Telah ONLINE!",
-                "{} welcome back ibab !",
-                "{} Menunggumu ",
-                "Darimana LU {}?\nAbis apa hayo ?",
+                "{} welcome back {} !",
+                "{} tetap semangat ",
+                "Darimana lu {}?\nAbis apa hayo ?",
+                "Ramein grupnya yuk!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
